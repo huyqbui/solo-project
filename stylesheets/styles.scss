@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+code {
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+}
+
+$white: white;
+$whiteSmoke: #f5f5f5;
+
+$realgray: gray;
+$gray: #2f3135;
+$slitegray: lighten($gray, 10%);
+$litegray: lighten($gray, 15%);
+$litergray: lighten($gray, 30%);
+$litestgray: lighten($gray, 50%);
+$slitedrkgray: darken($gray, 5%);
+$slitedrkergray: darken($gray, 10%);
+$drkgray: darken($gray, 15%);
+$drkergray: darken($gray, 30%);
+$drkestgray: darken($gray, 50%);
+
+$blue: #738adb;
+
+.app {
+  display: flex;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 0.25;
+  height: 100vh;
+  background-color: $slitedrkgray;
+}
+
+.container__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem; // about 20px;
+  color: $whiteSmoke;
+  border-bottom: 3px solid $slitegray;
+}
+
+.sidebar__channels {
+  flex: 1;
+}
+
+.sidebar__addChannel {
+  cursor: pointer;
+}
+
+.sidebar__addChannel:hover {
+  color: $whiteSmoke;
+}
+
+.sidebar__channelsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.65rem; // about 10px;
+  color: $litestgray;
+}
+
+.sidebar__header {
+  display: flex;
+  align-items: center;
+}
+
+.sidebarChannel:hover > h4 {
+  color: $whiteSmoke;
+  background-color: $litegray;
+}
+
+.sidebarChannel > h4 {
+  display: flex;
+  padding-left: 1rem;
+  align-items: center;
+  color: $realgray;
+  cursor: pointer;
+}
+
+.sidebarChannel__hash {
+  font-size: 25px;
+  padding: 0.5rem;
+}
+
+.sidebar__profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $realgray;
+  padding: 0.5rem;
+  border-top: 1px solid $realgray;
+  background-color: $slitedrkergray;
+}
+
+.sidebar__profileInfo > h3 {
+  color: $whiteSmoke;
+}
+
+.sidebar__profileInfo > p {
+  font-size: smaller;
+}
+
+.sidebar__profileInfo {
+  flex: 1;
+  padding: 0.8rem;
+}
+
+.sidebar__profileIcons {
+  padding: 0.8rem;
+}
+
+.sidebar__profileIcons:hover > .MuiSvgIcon-root {
+  color: $whiteSmoke;
+  cursor: pointer;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  flex: 0.75;
+  background-color: $gray;
+  height: 100vh;
+}
+
+.chat__input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.1rem;
+  border-radius: 0.4rem;
+  margin: 1.2rem;
+  border-top: 1px solid $realgray;
+  background-color: $slitegray;
+}
+
+.chat__input > form > input {
+  padding: 1rem;
+  background: transparent;
+  width: 100%;
+  border: none;
+  outline-width: 0;
+  color: $white;
+  font-size: large;
+}
+
+.chat__input > form {
+  flex: 1;
+}
+
+.chat__inputButton {
+  display: none;
+}
+
+.chat__messages {
+  flex: 1;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 0.7rem;
+  border-radius: 3px;
+  background: $slitedrkergray;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: $slitegray;
+}
+
+.chatHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 0.65rem;
+}
+
+.chatHeader__hash {
+  color: $realgray;
+  font-size: 1.6rem;
+  padding: 0.65rem;
+}
+
+.chatHeader__left > h3 {
+  display: flex;
+  align-items: center;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem;
+}
+
+.message__info {
+  color: $white;
+  margin-left: 0.8rem;
+}
+
+.message__info > p {
+  color: darken($white, 20%);
+}
+
+.message__timestamp {
+  color: $litegray;
+  margin-left: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.login {
+  display: grid;
+  place-items: center;
+  background-color: $gray;
+  color: $litergray;
+  width: 100%;
+  height: 100vh;
+}
+
+.login > Button {
+  width: 30%;
+  background-color: $litegray;
+  color: #eff2f5;
+  font-weight: 600;
+}
+
+.settingsPopup {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  // background-color: $blue;
+}
+
+.settingsPopup > Button {
+  display: flex;
+  width: 40%;
+  font-weight: 800;
+  font-size: large;
+}
