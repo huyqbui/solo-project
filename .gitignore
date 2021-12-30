@@ -1,0 +1,19 @@
+.DS_Store
+
+#dependencies
+node_modules/
+
+#firebase
+server/firebase
+
+#firebaseConfig
+firebase.js
+
+#output from webpack
+dist/
+
+#secret username & password
+secret.json
+
+#package lock
+package-lock.json
